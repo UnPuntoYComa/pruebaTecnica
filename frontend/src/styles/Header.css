@@ -1,0 +1,792 @@
+/* Header Styles */
+.header {
+  font-family: inherit;
+  position: relative;
+}
+
+/* Header con scroll */
+.header-scrolled {
+  padding-top: 80px; /* Espacio para el header fijo */
+}
+
+/* Top message banner */
+.header-message-banner {
+    background-color: #eee;
+    font-weight: 700;
+    line-height: 21px;
+    display: flex;
+    justify-content: center;
+}
+
+.header-message-content {
+    background-color: #eee;
+    padding: 12px 0;
+    min-width: 70ch;
+    max-width: 80ch;
+    overflow: hidden;
+    position: relative;
+}
+
+.header-message-container {
+  width: 100%;
+  position: relative;
+  height: 100%;
+}
+
+.header-message-slider {
+  display: flex;
+  width: 100%; /* Duplicamos el ancho para los mensajes duplicados */
+}
+
+.header-message-item {
+  width: 100%;
+  flex-shrink: 0;
+  text-align: center;
+  font-size: 14px;
+  color: #000;
+}
+
+.header-message-link {
+  color: #000;
+  text-decoration: underline;
+  margin-left: 5px;
+  font-weight: 500;
+}
+
+/* Top navigation bar */
+.header-top-bar {
+  background: #f8f9fa;
+  font-size: 13px;
+}
+.header-top-container {
+  height: 50px;
+  background-color: #fff;
+}
+.header-top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  height: 100%;
+}
+
+.header-top-logos-left {
+  display: flex;
+  height: 100%;
+}
+
+.header-logo-container {
+  width: 133px !important;
+  background-color: #101e8d;
+  border-radius: 6px 6px 0 0;
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.jugueton-logo-top-container {
+  background-color: #ffffff;
+  box-shadow: 4px 4px 9px rgba(0, 0, 0, .145) !important;
+}
+.header-cemaco-logo-blue {
+  height: 20px;
+  width: 89px;
+  max-width: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.header-jugueton-section {
+  background: white;
+  padding: 6px 12px;
+  border-radius: 6px 8px 0 0;
+  display: flex;
+  align-items: center;
+  box-shadow: 4px 4px 9px rgba(0, 0, 0, .145);
+}
+
+.header-jugueton-logo-top {
+  height: auto;
+  width: 69.99px;
+  max-width: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.header-top-links {
+  display: flex;
+  align-items: center;
+  padding-right: 69px;
+}
+
+.header-top-link {
+  font-size: 12px;
+  line-height: 48px;
+  color: #707070;
+  text-decoration: none;
+  margin-left: 54px;
+}
+
+.header-top-link:hover {
+  color: #101e8d;
+}
+
+.header-user-info {
+  color: #6c757d;
+  font-size: 13px;
+}
+
+.header-logout-btn {
+  background: none;
+  border: none;
+  color: #6c757d;
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 13px;
+}
+
+.header-logout-btn:hover {
+  color: #101e8d;
+}
+
+/* Main header */
+.header-main {
+  background: #101e8d;
+  padding-top: 11.8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+/* Header fijo al hacer scroll */
+.header-main-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 11.8px 0 13.9px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  animation: slideDown 0.3s ease-in-out;
+}
+
+.header-main-container {
+  max-width: 1378px;
+  margin: 0 auto;
+}
+
+.header-main-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+/* Logo section */
+.header-logo-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Mobile menu - oculto por defecto en desktop */
+.header-mobile-menu {
+  display: none;
+}
+
+.header-hamburger-menu {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: white;
+  cursor: pointer;
+}
+
+.header-hamburger-icon {
+  width: 28px;
+  height: 28px;
+}
+
+.header-menu-text {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Departamentos en versión fixed */
+.header-departments-fixed {
+  display: flex;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+  margin-left: 21.9px;
+  font-size: 16px;
+  line-height: 50px;
+  font-weight: 700;
+}
+
+.header-cemaco-logo {
+  height: 40px;
+  max-width: 162.42px;
+  object-fit: contain;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.header-cemaco-logo-scrolled {
+  height: 42px;
+  max-width: 100px;
+}
+
+/* Search bar */
+.header-search-container {
+  flex: 1;
+  max-width: 920px;
+  margin: 0 20px;
+  position: relative;
+}
+
+.header-search-input {
+    width: 100%;
+    height: 35px;
+    padding: .25rem 1rem;
+    border-radius: 20px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: 1px solid #fff;
+    background-color: #fff;
+    font-size: 1rem;
+}
+
+.header-search-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #6b7280;
+}
+
+.header-search-icon svg {
+  width: 12px;
+  height: 12px;
+}
+
+/* User actions */
+.header-user-actions {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.header-action-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.header-action-item:hover {
+  color: #f0f0f0;
+}
+
+.header-action-icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* Navigation bar */
+.header-navigation {
+  background: #101e8d;
+  line-height: 50px;
+}
+
+.header-navigation-container {
+  max-width: 1378px;
+  margin: 0 auto;
+}
+
+.header-navigation-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  color: white;
+}
+
+.header-departments {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.header-departments-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.header-nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.header-nav-link:hover {
+  color: #f0f0f0;
+  text-decoration: underline;
+}
+
+.header-services {
+  margin-left: auto;
+  display: flex;
+  gap: 30px;
+  font-size: 14px;
+}
+
+.header-service-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: white;
+  margin: 0 0 0 61px;
+}
+
+.header-service-icon {
+  width: 22px;
+  height: 22px;
+}
+
+/* Category navigation */
+.header-categories {
+  background: white;
+  padding: 16px 0;
+}
+
+.header-categories-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.header-categories-content {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  color: #6c757d;
+  font-size: 14px;
+}
+
+.header-category-link {
+  color: #6c757d;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.header-category-link:hover {
+  color: #101e8d;
+}
+
+/* Responsive design - Tablet */
+@media (max-width: 1124px) {
+  .header-navigation-content {
+    display: none;
+  }
+
+  .header-categories-content {
+    flex-direction: row;
+  }
+  
+  .header-top-links {
+    display: none;
+  }
+
+  .header-message-link::before {
+    content: "\A";
+    white-space: pre;
+  }
+
+  /* Mostrar menú hamburguesa en tablet */
+  .header-mobile-menu {
+    display: flex;
+  }
+
+  .header-logo-section {
+    order: 2;
+  }
+
+  .header-search-container {
+    order: 3;
+    flex: 1;
+    margin: 0 20px;
+  }
+
+  .header-user-actions {
+    order: 4;
+  }
+
+  .header-main-content {
+    flex-flow: row nowrap;
+    align-items: center;
+    padding: 0 20px;
+  }
+
+  .header-main-container {
+    padding: 0;
+  }
+
+  /* Ocultar departamentos en tablet */
+  .header-departments-fixed {
+    display: none;
+  }
+
+  .header-cemaco-logo {
+    height: 35px;
+  }
+
+  /* Estilos cuando NO está en scroll (sin fixed) - buscador en segunda línea */
+  .header-main:not(.header-main-fixed) .header-main-content {
+    flex-flow: row wrap;
+    padding-bottom: 10px;
+  }
+
+  .header-main:not(.header-main-fixed) .header-search-container {
+    width: 90%;
+    order: 4;
+    flex: none;
+    margin-top: 10px;
+  }
+
+  .header-main:not(.header-main-fixed) .header-user-actions {
+    order: 3;
+  }
+
+  /* Estilos cuando SÍ está en scroll (fixed) - todo en una línea */
+  .header-main-fixed .header-main-content {
+    flex-flow: row nowrap;
+  }
+
+  .header-main-fixed .header-search-container {
+    order: 3;
+    flex: 1;
+    width: auto;
+    margin: 0 20px;
+  }
+
+  .header-main-fixed .header-user-actions {
+    order: 4;
+  }
+
+}
+/* Responsive design - Mobile */
+@media (max-width: 768px) {
+  .header-scrolled {
+    padding-top: 70px; /* Menos padding en móvil */
+  }
+
+  .header-main-fixed {
+    padding: 6px 0;
+  }
+
+  /* Mostrar menú hamburguesa en móvil */
+  .header-mobile-menu {
+    display: flex;
+  }
+
+  .header-main-content {
+    padding: 0 15px;
+  }
+
+  /* Admin responsive styles */
+  .admin-header-container {
+    padding: 0 1rem;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .admin-header-left {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .admin-title-section {
+    border-left: none;
+    border-top: 2px solid rgba(255,255,255,0.3);
+    padding-left: 0;
+    padding-top: 10px;
+    text-align: center;
+  }
+
+  .admin-title {
+    font-size: 1.2rem;
+  }
+
+  .admin-subtitle {
+    font-size: 0.8rem;
+  }
+
+  .admin-header-right {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .admin-user-info {
+    align-items: center;
+    order: 2;
+  }
+
+  .admin-user-avatar {
+    order: 1;
+  }
+
+  .admin-actions {
+    order: 3;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  .admin-content-container {
+    padding: 0 1rem;
+  }
+
+  .admin-logo {
+    height: 35px;
+    max-width: 100px;
+  }
+  
+  .header-search-container {
+    margin: 0 10px;
+  }
+
+  .header-cemaco-logo {
+    height: 30px;
+  }
+  
+  .header-navigation-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .header-services {
+    margin-left: 0;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .header-cemaco-logo-scrolled {
+    height: 30px;
+    max-width: 90px;
+  }
+  .header-top-nav {
+    background-color: #fff;
+  }
+  .header-scrolled .header-logo-section::after {
+    content: "Menú";
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #ddd;
+  }
+}
+
+/* Admin Layout Styles */
+.admin-layout {
+  min-height: 100vh;
+  background: #ffffff;
+  font-family: Arial, sans-serif;
+}
+
+.admin-header {
+  background: #101e8d;
+  color: white;
+  padding: 12px 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.admin-header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin-header-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.admin-logo {
+  height: 40px;
+  max-width: 120px;
+  object-fit: contain;
+  display: block;
+}
+
+.admin-title-section {
+  border-left: 2px solid rgba(255,255,255,0.3);
+  padding-left: 20px;
+}
+
+.admin-title {
+  margin: 0;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.admin-subtitle {
+  margin: 0.25rem 0 0 0;
+  color: #cbd5e1;
+  font-size: 0.9rem;
+}
+
+.admin-header-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.admin-user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.25rem;
+}
+
+.admin-user-name {
+  color: white;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.admin-user-role {
+  color: #cbd5e1;
+  font-size: 0.8rem;
+  text-transform: capitalize;
+}
+
+.admin-user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #3b82f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.admin-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.admin-link {
+  color: #cbd5e1;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.admin-link:hover {
+  color: white;
+}
+
+.admin-logout-btn {
+  background: none;
+  border: none;
+  color: #fca5a5;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-align: left;
+  padding: 0;
+}
+
+.admin-logout-btn:hover {
+  color: #f87171;
+}
+
+.admin-content {
+  padding: 2rem 0;
+  min-height: calc(100vh - 100px);
+  background: #ffffff;
+}
+
+.admin-content-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Responsive Styles for Admin Layout */
+
+@media (max-width: 480px) {
+  .admin-header {
+    padding: 8px 0;
+  }
+
+  .admin-header-container {
+    padding: 0 0.75rem;
+  }
+
+  .admin-title {
+    font-size: 1rem;
+  }
+
+  .admin-subtitle {
+    font-size: 0.75rem;
+  }
+
+  .admin-user-name {
+    font-size: 0.8rem;
+  }
+
+  .admin-user-role {
+    font-size: 0.7rem;
+  }
+
+  .admin-user-avatar {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+  }
+
+  .admin-link, .admin-logout-btn {
+    font-size: 0.75rem;
+  }
+
+  .admin-content {
+    padding: 1rem 0;
+  }
+
+  .admin-logo {
+    height: 30px;
+    max-width: 90px;
+  }
+}
+
+/* Animaciones */
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}

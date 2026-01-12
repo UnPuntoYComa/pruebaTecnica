@@ -1,0 +1,98 @@
+version: '3.8'
+
+services:
+  # Base de datos MySQL
+  database:
+    image: mysql:8.0
+    container_name: cemaco_mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: cemaco_db
+      MYSQL_USER: cemaco_user
+      MYSQL_PASSWORD: cemaco_password
+    ports:
+      - "3307:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./backend/init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - cemaco_network
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      timeout: 10s
+      retries: 5
+      interval: 10s
+
+  # Backend API
+  backend:
+    build: ./backend
+    container_name: cemaco_backend
+    environment:
+      NODE_ENV: production
+      DB_HOST: database
+      DB_NAME: cemaco_db
+      DB_USER: cemaco_user
+      DB_PASSWORD: cemaco_password
+      DB_PORT: 3306
+      DB_DIALECT: mysql
+      JWT_SECRET: cemaco_jwt_secret_key_2024
+      PORT: 5001
+    ports:
+      - "5001:5001"
+    volumes:
+      - ./backend/src:/app/src
+      - ./backend/uploads:/app/uploads
+    depends_on:
+      database:
+        condition: service_healthy
+    networks:
+      - cemaco_network
+    restart: unless-stopped
+
+  # Frontend React
+  frontend:
+    build: ./frontend
+    container_name: cemaco_frontend
+    environment:
+      VITE_API_URL: http://localhost:5001
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend/src:/app/src
+      - ./frontend/public:/app/public
+    depends_on:
+      - backend
+    networks:
+      - cemaco_network
+    restart: unless-stopped
+
+  # Seeder para datos iniciales
+  seeder:
+    build: ./backend
+    container_name: cemaco_seeder
+    environment:
+      NODE_ENV: production
+      DB_HOST: database
+      DB_NAME: cemaco_db
+      DB_USER: cemaco_user
+      DB_PASSWORD: cemaco_password
+      DB_PORT: 3306
+      DB_DIALECT: mysql
+      JWT_SECRET: cemaco_jwt_secret_key_2024
+    command: npm run seed
+    depends_on:
+      database:
+        condition: service_healthy
+    networks:
+      - cemaco_network
+    restart: "no"
+
+# Volúmenes persistentes
+volumes:
+  mysql_data:
+    driver: local
+
+# Red personalizada
+networks:
+  cemaco_network:
+    driver: bridge

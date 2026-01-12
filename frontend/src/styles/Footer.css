@@ -1,0 +1,499 @@
+/* Footer Styles */
+.footer {
+  font-family: inherit;
+}
+
+/* Top Bar Styles */
+.footer-top-bar {
+  background: #101e8d;
+  color: white;
+  padding: 12px 0;
+  font-size: 14px;
+}
+
+.footer-top-container {
+  display: flex;
+  justify-content: space-evenly; 
+}
+
+.footer-top-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: .3px;
+  white-space: nowrap;
+  font-weight: 700;
+  color: #fff;
+  cursor: pointer;
+}
+
+.footer-top-icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* Main Footer Styles */
+.footer-main {
+  padding-top: 28.8px;
+  background: #f8f9fa;
+  color: #333;
+}
+
+.footer-container {
+  margin: 0 42px;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  background-color: #f6f6f6;
+}
+
+/* Footer Content Layout */
+.footer-content {
+  display: flex;
+  flex-direction: row;
+  gap: 45px;
+  width: 100%;
+}
+
+/* Subscription Section */
+.footer-subscription {
+  margin-top: 20px;
+}
+
+/* Hide mobile subscription on desktop, show desktop subscription */
+@media (min-width: 768px) {
+  .footer-subscription-mobile {
+    display: none;
+  }
+  
+  .footer-subscription-mobile-top {
+    display: none; /* Ocultar la versión de arriba en desktop */
+  }
+  
+  .footer-subscription-desktop {
+    display: block;
+    order: 2;
+    margin-top: 20px;
+  }
+}
+
+/* Hide desktop subscription on mobile, show mobile subscription */
+@media (max-width: 767px) {
+  .footer-subscription-desktop {
+    display: none;
+  }
+  
+  .footer-subscription-mobile {
+    display: none; /* Ocultar la versión original en móvil */
+  }
+  
+  .footer-subscription-mobile-top {
+    display: block; /* Mostrar la versión de arriba en móvil */
+    padding: 20px 0 0 0;
+    margin: 0;
+  }
+  .footer-subscription-form {
+    width: 100%;
+  }
+  .footer-subscription-mobile-top .footer-container {
+    margin: 0 42px;
+    padding: 0 1rem;
+  }
+}
+
+.footer-subscription-title {
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 700;
+  color: #000;
+}
+
+.footer-subscription-text {
+  display: block;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #000;
+}
+
+.footer-subscription-form {
+  margin-top: 11.3px;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.footer-subscription-input {
+  flex: 1;
+  padding: 10px 15px;
+  border: 1px solid #707070;
+  font-size: 14px;
+  border-radius: 20px;
+}
+
+.footer-subscription-button {
+  background: #101e8d;
+  color: white;
+  border: none;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  cursor: pointer;
+  padding: 15px 33px;
+  border-radius: 20px;
+}
+
+.footer-subscription-button:hover {
+  background: #0f1a7a;
+}
+
+/* Navigation Grid */
+.footer-grid-wrapper {
+  width: 67%;
+  display: flex;
+  flex-direction: column;
+  order: 1;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 35px;
+}
+
+/* Footer Section Styles - Unified for desktop and mobile */
+.footer-section {
+  position: relative;
+}
+
+.footer-section-header {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 0;
+  text-align: left;
+  cursor: default;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-section-title {
+  margin-bottom: 12px;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 700;
+  color: #000;
+}
+
+.footer-section-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000;
+}
+
+.footer-section-link {
+  color: #000;
+  text-decoration: none;
+}
+
+.footer-section-link:hover {
+  text-decoration: underline;
+}
+
+/* Accordion Icon - Hidden on desktop */
+.footer-accordion-icon {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease;
+  display: none;
+}
+
+.footer-accordion-icon.open {
+  transform: rotate(180deg);
+}
+
+/* Empresa Section */
+.footer-empresa-wrapper {
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  order: 2;
+}
+
+.footer-empresa-top-row {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.footer-empresa-b {
+  flex: 2;
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.footer-empresa-b-logo-container {
+  margin-top: 4px;
+}
+
+.footer-empresa-b-logo {
+  width: 60px;
+  height: auto;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.footer-empresa-b-content {
+  flex: 1;
+}
+
+.footer-empresa-b-text {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 700;
+  color: #000;
+  margin: 0 0 8px 0;
+}
+
+.footer-empresa-b-subtitle {
+  margin: 0 0 8px 0;
+  font-size: 12px;
+  color: #000;
+  line-height: 14px;
+  max-width: 280px;
+}
+
+.footer-empresa-b-link {
+  color: #000;
+  text-decoration: underline;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* Opinions Section */
+.footer-opinions {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-opinions-container {
+  position: relative;
+  display: inline-block;
+}
+
+.footer-opinions-image {
+  width: 140px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.footer-opinions-overlay {
+  position: absolute;
+  top: 46%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #333;
+  font-weight: bold;
+}
+
+.footer-opinions-number {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 2px;
+}
+
+.footer-opinions-text {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
+  margin: 0;
+}
+
+.footer-opinions-stars {
+  margin-top: 4px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #ffd700;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  padding-top: 7.9px;
+  padding-bottom: 18px;
+  padding-left: 12px;
+  padding-right: 12px;
+  max-width: 1378px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-bottom-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-bottom-link {
+  font-size: 16px;
+  line-height: 24px;
+  color: #000;
+}
+
+.footer-social-icons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: #666;
+  border-radius: 50%;
+  color: white;
+  text-decoration: none;
+}
+
+.footer-social-icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Tablet Layout */
+@media (max-width: 1024px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .footer-grid-wrapper {
+    width: 100%;
+    order: 2;
+  }
+  
+  .footer-empresa-wrapper {
+    width: 100%;
+    order: 3;
+  }
+  
+  .footer-top-container {
+    flex-direction: column;
+  }
+  
+  .footer-top-item {
+    font-size: 16px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+  }
+  
+  .footer-container {
+    margin: 0;
+    padding: 0;
+  }
+  .footer-main {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}
+
+/* Mobile Layout */
+@media (max-width: 767px) {
+  .footer-container {
+    flex-direction: column;
+  }
+  .footer-subscription.footer-subscription-mobile,.footer-empresa-top-row{
+    margin: 0 20px;
+  }
+  /* Transform grid into accordion on mobile */
+  .footer-grid {
+    display: block;
+  }
+  
+  .footer-section {
+    border-bottom: 0.5px solid #000;
+  }
+
+  .footer-section:last-of-type {
+    margin-bottom: 30px;
+  }
+  
+  .footer-section-header {
+    cursor: pointer;
+    padding: 15px 20px;
+  }
+  
+  .footer-section-title {
+    margin-bottom: 0;
+  }
+  
+  .footer-accordion-icon {
+    display: block;
+  }
+  
+  .footer-section-list {
+    margin-top: 10px;
+    display: none;
+  }
+  
+  .footer-section-list.open {
+    display: block;
+  }
+  
+  .footer-grid-wrapper {
+    order: 2;
+  }
+  
+  .footer-empresa-wrapper {
+    order: 3;
+    margin-top: 0;
+  }
+  
+  .footer-bottom {
+    margin: 0 20px;
+    padding: 20px;
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .footer-social-icons {
+    order:1;
+    width: 100%;
+  }
+  .footer-bottom-links{
+    order:2;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .header-scrolled .header-logo-section img{
+    display: none;
+  }
+  .footer-main {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+  }
+}
