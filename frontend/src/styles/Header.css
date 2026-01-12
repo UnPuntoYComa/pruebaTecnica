@@ -68,6 +68,8 @@
   align-items: center;
   gap: 20px;
   height: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
 }
 
 .header-top-logos-left {
@@ -568,7 +570,7 @@
   }
 
   .header-cemaco-logo {
-    height: 30px;
+    height: 20px;
   }
   
   .header-navigation-content {
@@ -779,6 +781,27 @@
     height: 30px;
     max-width: 90px;
   }
+  .header-message-item {
+    font-size: 11px;
+  }
+  .footer-subscription-input {
+    padding: 0;
+  }
+  .footer-subscription-form{
+    gap: 0;
+  }
+  .header-logo-section{
+    gap: 10px;
+    }
+    .footer-subscription-button{
+    padding: 4px !important;
+    }
+    .footer-subscription-mobile-top .footer-container{
+    padding: 0 5px !important;
+    }
+    .header-user-actions{
+    gap: 0;
+    }
 }
 
 /* Animaciones */
