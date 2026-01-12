@@ -392,9 +392,16 @@
 .header-category-link:hover {
   color: #101e8d;
 }
-
+@media (max-width: 1324px) {
+.header-navigation-container {
+    max-width: 1108px;
+  }
+}
 /* Responsive design - Tablet */
 @media (max-width: 1124px) {
+  .header-navigation-container {
+    padding: 0 10px;
+  }
   .header-navigation-content {
     display: none;
   }

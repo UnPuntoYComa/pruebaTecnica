@@ -389,7 +389,11 @@
   width: 16px;
   height: 16px;
 }
-
+@media (max-width: 1324px) {
+  .footer-empresa-b-text {
+    font-size: 15px;
+  }
+}
 /* Tablet Layout */
 @media (max-width: 1024px) {
   .footer-content {
