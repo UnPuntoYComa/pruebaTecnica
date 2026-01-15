@@ -44,7 +44,6 @@ export const listar = async (req, res) => {
       where: whereCondition,
       limit: parseInt(limit),
       offset: parseInt(offset),
-      order: [['createdAt', 'DESC']],
     });
 
     res.json({
